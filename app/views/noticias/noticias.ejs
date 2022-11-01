@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Noticia</title>
-</head>
+	<html lang="pt-br">
+		<head>
+			<meta charset="utf-8"/>
+			<title>Notícias</title>
+		</head>
 	<body>
-			<table>
+
+		<h1>Notícias</h1>
+
+		<table>
+			<tr>
+				<td>ID</td>
+				<td>Título</td>
+			</tr>
+
+			<% for(var i=0; i < noticias.length; i++) { %>
 				<tr>
-					<td>ID</td>
-					<td>Titulo</td>
+					<td><%= noticias[i].id_noticia %></td>
+					<td><%= noticias[i].titulo %></td>
 				</tr>
-				<% for(var i=0;i < noticias.length; i++) { %>
-					<tr>
-						<td><%= noticias[i].id_notica %></td>
-						<td><%= noticias[i].titulo %></td>
-					</tr>
-				<% } %>
-			</table>
+			<% } %>
+		</table>
+
 	</body>
 </html>
